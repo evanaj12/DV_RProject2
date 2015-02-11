@@ -1,0 +1,1 @@
+txCaCompanyData >- companyData %>% select(RANK, STATE, COMPANY, INDUSTRY)%>% filter(STATE %in% c("TX", "CA"))
