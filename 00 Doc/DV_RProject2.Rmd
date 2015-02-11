@@ -3,11 +3,11 @@ title: "DV_RProject2"
 output: html_document
 ---
 
-This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+Natasha Halfin, Evan Johnston, Kaylyn Zvonek
 
+For this project, we used a dataset containing information on the top 5000 companies in the country, including their state, city, industry, revenue, and percentage of growth.
 
-
-```{r, eval = TRUE, echo = FALSE}
+```{r, echo = FALSE}
 library("ggplot2")
 library("gplots")
 library("bitops")
@@ -23,12 +23,35 @@ library("dplyr")
 
 ```{r, eval = TRUE, echo = FALSE}
 source("../01 Data/data.R")
+source("../02 Data Wrangling/dataWrangling.R")
 ```
 
-You can also embed plots, for example:
+This is a dataframe of our entire dataset.
 
 ```{r, eval =TRUE, echo=FALSE}
 data.frame(head(companyData))
 ```
+
+
+This is a dataframe of wrangled data that indicates the average revenue and growth across each industry.
+```{r, eval =TRUE, echo=FALSE}
+data.frame(head(industryGrowthData))
+```
+
+This is a wrangled dataframe displaying companies in Texas and California
+```{r, eval =TRUE, echo=FALSE}
+data.frame(head(txCaCompanyData))
+```
+
+This wrangled dataframe shows the highest revenue and growth by state.
+```{r, eval =TRUE, echo=FALSE}
+data.frame(head(stateGrowth))
+```
+This wrangled dataframe indicates the lowest revenue and growth by city.
+```{r, eval =TRUE, echo=FALSE}
+data.frame(head(cityGrowth))
+```
+Data Visualizations (EVAN NEED 4 HERE based on wrangled dataframes above)
+
 
 Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.

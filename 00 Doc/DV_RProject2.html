@@ -55,8 +55,16 @@ if (window.hljs && document.readyState && document.readyState === "complete") {
 </div>
 
 
-<p>This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <a href="http://rmarkdown.rstudio.com">http://rmarkdown.rstudio.com</a>.</p>
+<p>Natasha Halfin, Evan Johnston, Kaylyn Zvonek</p>
+<p>For this project, we used a dataset containing information on the top 5000 companies in the country, including their state, city, industry, revenue, and percentage of growth.</p>
 <pre><code>## 
+## Attaching package: 'gplots'
+## 
+## The following object is masked from 'package:stats':
+## 
+##     lowess
+## 
+## 
 ## Attaching package: 'dplyr'
 ## 
 ## The following objects are masked from 'package:plyr':
@@ -71,7 +79,7 @@ if (window.hljs && document.readyState && document.readyState === "complete") {
 ## The following objects are masked from 'package:base':
 ## 
 ##     intersect, setdiff, setequal, union</code></pre>
-<p>You can also embed plots, for example:</p>
+<p>This is a dataframe of our entire dataset.</p>
 <pre><code>##   RANK
 ## 1  152
 ## 2  153
@@ -93,6 +101,14 @@ if (window.hljs && document.readyState && document.readyState === "complete") {
 ## 4 Cincinnati    OH Business Products &amp; Services $25500000.00 1182.4%
 ## 5      Tampa    FL Consumer Products &amp; Services  $2900000.00 1179.1%
 ## 6  Riverside    CA                Manufacturing $14400000.00 1175.1%</code></pre>
+<p>This is a dataframe of wrangled data that indicates the average revenue and growth across each industry.</p>
+<pre><code>##                       INDUSTRY      REVENUE  GROWTH
+## 1          Government Services $21900000.00 1190.9%
+## 2                       Retail  $6200000.00 1190.5%
+## 3      Advertising &amp; Marketing $58600000.00 1187.6%
+## 4 Business Products &amp; Services $25500000.00 1182.4%
+## 5 Consumer Products &amp; Services  $2900000.00 1179.1%
+## 6                Manufacturing $14400000.00 1175.1%</code></pre>
 <p>Note that the <code>echo = FALSE</code> parameter was added to the code chunk to prevent printing of the R code that generated the plot.</p>
 
 
