@@ -1,1 +1,2 @@
 txCaCompanyData <- companyData %>% select(RANK, STATE, COMPANY, INDUSTRY)%>% filter(STATE %in% c("TX", "CA"))
+industryGrowthData <- companyData %>% select(INDUSTRY, cummean(REVENUE), cummean(GROWTH))%>% group_by(INDUSTRY)
