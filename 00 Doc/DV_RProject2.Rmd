@@ -42,6 +42,11 @@ This is a wrangled dataframe displaying companies in Texas and California
 ```{r, eval =TRUE, echo=FALSE}
 data.frame(head(txCaCompanyData))
 ```
+This is a wrangled dataframe displaying average revenue and growth by industry.
+
+```{r, eval =TRUE, echo=FALSE}
+data.frame(head(industryGrowthData))
+```
 
 This wrangled dataframe shows the highest revenue and growth by state.
 ```{r, eval =TRUE, echo=FALSE}
