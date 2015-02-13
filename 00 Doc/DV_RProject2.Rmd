@@ -12,7 +12,7 @@ library("ggplot2")
 library("gplots")
 library("bitops")
 library("knitr")
-library("plyr")
+#library("plyr")
 library("RCurl")
 library("reshape2")
 library("tidyr")
@@ -31,21 +31,21 @@ This is a dataframe of our entire dataset.
 ```{r, eval =TRUE, echo=FALSE}
 data.frame(head(companyData))
 ```
-
+This is a dataframe of a subset of our data displaying companies in Texas that are in the IT services industry.
+```{r, eval =TRUE, echo=FALSE}
+data.frame(head(subset1))
+```
 
 This is a dataframe of wrangled data that indicates the average revenue and growth across each industry.
+
 ```{r, eval =TRUE, echo=FALSE}
 data.frame(head(industryGrowthData))
 ```
 
-This is a wrangled dataframe displaying companies in Texas and California
+This is a wrangled dataframe displaying companies in Texas and California and their industries.
+
 ```{r, eval =TRUE, echo=FALSE}
 data.frame(head(txCaCompanyData))
-```
-This is a wrangled dataframe displaying average revenue and growth by industry.
-
-```{r, eval =TRUE, echo=FALSE}
-data.frame(head(industryGrowthData))
 ```
 
 This wrangled dataframe shows the highest revenue and growth by state.

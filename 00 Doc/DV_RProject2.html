@@ -67,11 +67,6 @@ if (window.hljs && document.readyState && document.readyState === "complete") {
 ## 
 ## Attaching package: 'dplyr'
 ## 
-## The following objects are masked from 'package:plyr':
-## 
-##     arrange, count, desc, failwith, id, mutate, rename, summarise,
-##     summarize
-## 
 ## The following object is masked from 'package:stats':
 ## 
 ##     filter
@@ -80,35 +75,89 @@ if (window.hljs && document.readyState && document.readyState === "complete") {
 ## 
 ##     intersect, setdiff, setequal, union</code></pre>
 <p>This is a dataframe of our entire dataset.</p>
-<pre><code>##   RANK
-## 1  152
-## 2  153
-## 3  154
-## 4  155
-## 5  156
-## 6  157
-##                                                                                          COMPANY
-## 1  Capital City Technologies (http://www.inc.com/inc5000/2009/company-profile.html?id=200901520)
-## 2                    Reuseit (http://www.inc.com/inc5000/2009/company-profile.html?id=200901530)
-## 3            CPX Interactive (http://www.inc.com/inc5000/2009/company-profile.html?id=200901540)
-## 4            World Pac Paper (http://www.inc.com/inc5000/2009/company-profile.html?id=200901550)
-## 5 College Hunks Hauling Junk (http://www.inc.com/inc5000/2009/company-profile.html?id=200901560)
-## 6               Global Wedge (http://www.inc.com/inc5000/2009/company-profile.html?id=200901570)
-##         CITY STATE                     INDUSTRY      REVENUE  GROWTH
-## 1    Suwanee    GA          Government Services $21900000.00 1190.9%
-## 2    Chicago    IL                       Retail  $6200000.00 1190.5%
-## 3   Westbury    NY      Advertising &amp; Marketing $58600000.00 1187.6%
-## 4 Cincinnati    OH Business Products &amp; Services $25500000.00 1182.4%
-## 5      Tampa    FL Consumer Products &amp; Services  $2900000.00 1179.1%
-## 6  Riverside    CA                Manufacturing $14400000.00 1175.1%</code></pre>
+<pre><code>##   RANK                        COMPANY
+## 1  173 GeBBS Healthcare Solutions (ht
+## 2  174 PriceSpective (http://www.inc.
+## 3  175 GlobalTranz (http://www.inc.co
+## 4  176 MicroTech (http://www.inc.com/
+## 5  177 Senior Whole Health (http://ww
+## 6  178 AtTask (http://www.inc.com/inc
+##                                                                                   COMPANYWEBSITE
+## 1 GeBBS Healthcare Solutions (http://www.inc.com/inc5000/2009/company-profile.html?id=200901730)
+## 2              PriceSpective (http://www.inc.com/inc5000/2009/company-profile.html?id=200901740)
+## 3                GlobalTranz (http://www.inc.com/inc5000/2009/company-profile.html?id=200901750)
+## 4                  MicroTech (http://www.inc.com/inc5000/2009/company-profile.html?id=200901760)
+## 5        Senior Whole Health (http://www.inc.com/inc5000/2009/company-profile.html?id=200901770)
+## 6                     AtTask (http://www.inc.com/inc5000/2009/company-profile.html?id=200901780)
+##               CITY STATE                   INDUSTRY   REVENUE GROWTH
+## 1 Englewood Cliffs    NJ                     Health   5400000 11.100
+## 2        Blue Bell    PA                     Health   9500000 11.098
+## 3          Phoenix    AZ Logistics &amp; Transportation  25400000 11.048
+## 4           Vienna    VA        Government Services  39000000 11.029
+## 5        Cambridge    MA                  Insurance 207700000 10.999
+## 6             Orem    UT                   Software  15500000 10.971
+##   PERCENTAGEGROWTH
+## 1           1110.0
+## 2           1109.8
+## 3           1104.8
+## 4           1102.9
+## 5           1099.9
+## 6           1097.1</code></pre>
+<p>This is a dataframe of a subset of our data displaying companies in Texas that are in the IT services industry.</p>
+<pre><code>##     RANK                        COMPANY
+## 163  120 Improving Enterprises (http://
+## 170  127 Headspring Systems (http://www
+## 353  353 Mystikal Solutions (http://www
+## 439  440 American Unit (http://www.inc.
+## 444  445 Wise Men Consultants (http://w
+## 450  451 Xenosoft Technologies (http://
+##                                                                                COMPANYWEBSITE
+## 163 Improving Enterprises (http://www.inc.com/inc5000/2009/company-profile.html?id=200901200)
+## 170    Headspring Systems (http://www.inc.com/inc5000/2009/company-profile.html?id=200901270)
+## 353    Mystikal Solutions (http://www.inc.com/inc5000/2009/company-profile.html?id=200903530)
+## 439         American Unit (http://www.inc.com/inc5000/2009/company-profile.html?id=200904400)
+## 444  Wise Men Consultants (http://www.inc.com/inc5000/2009/company-profile.html?id=200904450)
+## 450 Xenosoft Technologies (http://www.inc.com/inc5000/2009/company-profile.html?id=200904510)
+##            CITY STATE    INDUSTRY  REVENUE GROWTH PERCENTAGEGROWTH
+## 163      Dallas    TX IT Services  6200000 14.171           1417.1
+## 170      Austin    TX IT Services  3500000 13.663           1366.3
+## 353 San Antonio    TX IT Services  3900000  6.985            698.5
+## 439      Frisco    TX IT Services 32800000  5.849            584.9
+## 444     Houston    TX IT Services 20600000  5.809            580.9
+## 450      Dallas    TX IT Services 13800000  5.762            576.2</code></pre>
 <p>This is a dataframe of wrangled data that indicates the average revenue and growth across each industry.</p>
-<pre><code>##                       INDUSTRY      REVENUE  GROWTH
-## 1          Government Services $21900000.00 1190.9%
-## 2                       Retail  $6200000.00 1190.5%
-## 3      Advertising &amp; Marketing $58600000.00 1187.6%
-## 4 Business Products &amp; Services $25500000.00 1182.4%
-## 5 Consumer Products &amp; Services  $2900000.00 1179.1%
-## 6                Manufacturing $14400000.00 1175.1%</code></pre>
+<pre><code>##                       INDUSTRY    revMean  groMean
+## 1      Advertising &amp; Marketing  873109823 357.2113
+## 2 Business Products &amp; Services   37500600 232.3464
+## 3            Computer Hardware   88256667 163.1550
+## 4                 Construction   53107910 190.5124
+## 5 Consumer Products &amp; Services   45950679 401.7045
+## 6                    Education 5821433946 224.3738</code></pre>
+<p>This is a wrangled dataframe displaying companies in Texas and California and their industries.</p>
+<pre><code>##   RANK STATE                        COMPANY                     INDUSTRY
+## 1  180    CA GuardianEdge (http://www.inc.c                     Security
+## 2  183    CA The Chip (http://www.inc.com/i                  IT Services
+## 3  185    CA Walz Group (http://www.inc.com Business Products &amp; Services
+## 4  187    CA cPrime (http://www.inc.com/inc                  IT Services
+## 5  188    CA Torrey Hills Technologies (htt                Manufacturing
+## 6  194    CA Ignify (http://www.inc.com/inc                  IT Services</code></pre>
+<p>This wrangled dataframe shows the highest revenue and growth by state.</p>
+<pre><code>##   STATE  groMax      revMax
+## 1    AK   337.1 1.60000e+07
+## 2    AL   866.1 9.12000e+08
+## 3    AR   404.5 2.32000e+07
+## 4    AZ  1396.0 4.97900e+08
+## 5    CA 13416.4 3.40549e+11
+## 6    CO  2358.4 5.60000e+09</code></pre>
+<p>This wrangled dataframe indicates the lowest revenue and growth by city.</p>
+<pre><code>##                  CITY  groMin   revMin
+## 1 San Juan Capistrano 13416.4 47400000
+## 2         Mill Valley 12749.3 63500000
+## 3       Crystal Beach  5970.8 19400000
+## 4          Chanhassen  5906.8 31700000
+## 5          Plaisnboro  5884.9 15000000
+## 6            Yorktown  5778.9 12000000</code></pre>
+<p>Data Visualizations (EVAN NEED 4 HERE based on wrangled dataframes above)</p>
 <p>Note that the <code>echo = FALSE</code> parameter was added to the code chunk to prevent printing of the R code that generated the plot.</p>
 
 
