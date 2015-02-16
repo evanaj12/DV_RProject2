@@ -17,8 +17,6 @@ library("RCurl")
 library("reshape2")
 library("tidyr")
 library("dplyr")
-
-
 ```
 
 ```{r, eval = TRUE, echo = FALSE}
@@ -56,7 +54,32 @@ This wrangled dataframe indicates the lowest revenue and growth by city.
 ```{r, eval =TRUE, echo=FALSE}
 data.frame(head(cityGrowth))
 ```
-Data Visualizations (EVAN NEED 4 HERE based on wrangled dataframes above)
+Data Visualizations
 
-
+```{r, eval = TRUE, echo = FALSE}
+source("../03 Visualizations/viz1.R")
+source("../03 Visualizations/viz2.R")
+source("../03 Visualizations/viz3.R")
+source("../03 Visualizations/viz4.R")
+```
+**Industry Revenues**
+This plot shows the average revenue for each industry. Because the revenues are so varied, they are split up into 6 groups of similar revenue values.
+```{r, echo= FALSE, warning=FALSE}
+plot(viz1)
+```
+**Industry Growth**
+This plot shows the average growth for each industry, ordered from least growth to most
+```{r, echo= FALSE, warning=FALSE}
+plot(viz2)
+```
+**Revenue and Growth by State**
+This plot shows the highest revenues and highest growth rates of each state as a percent of the maximum.
+```{r, echo= FALSE, warning=FALSE}
+plot(viz3)
+```
+**State Growth**
+This plot shows a comparison between number of companies in each industry for California and Texas
+```{r, echo= FALSE, warning=FALSE}
+plot(viz4)
+```
 Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
